@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "[App de riptutorial](https://riptutorial.com/typescript/example/29207/jest--ts-jest-) de jest con ts-jest",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@nestjs/common": "^8.0.6",
+    "@nestjs/core": "^8.0.6",
+    "@nestjs/swagger": "^5.0.9",
+    "@nestjs/typeorm": "^8.0.2",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "mysql": "^2.18.1",
+    "rxjs": "^7.3.0",
+    "typeorm": "^0.2.37"
+  },
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "jest": "^27.1.0",
@@ -11,22 +21,7 @@
     "typescript": "^4.4.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src",
-      "<rootDir>/spec"
-    ],
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
