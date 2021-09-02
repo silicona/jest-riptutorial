@@ -1,6 +1,5 @@
 import { conexion } from "../../support/ConexionTest"
 import { AccessService } from "../../../src/modules/main/Access/services/Access.service"
-import { Connection, Repository } from "typeorm";
 import { AccessEntity } from "../../../src/modules/main/Access/entities/Access.entity";
 
 describe("Probando", () => {
@@ -9,7 +8,7 @@ describe("Probando", () => {
     var servicio;
     beforeAll(async () => {
 
-        con = await conexion.iniciarAvi()
+        con = await conexion.iniciarAviAcceso()
         servicio = new AccessService(con.getRepository(AccessEntity));
     })
 
@@ -17,10 +16,8 @@ describe("Probando", () => {
         await conexion.cerrar()
     })
 
-    //var con = conexion
     it("It", async () => {
         var hotel = await servicio.getHotel(1)
-        
-        expect(hotel).toBe(true)
+        expect(hotel).toBeInstanceOf(AccessEntity)
     })
 })

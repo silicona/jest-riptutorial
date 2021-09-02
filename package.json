@@ -23,7 +23,9 @@
   },
   "scripts": {
     "test": "jest",
-    "test-uno": "jest $ruta",
+    "test-ruta": "jest $ruta",
+    "test:avi": "jest ./spec/modules/Text/Text.service.spec.ts",
+    "test-access": "jest ./spec/modules/Access/Access.service.spec.ts",
     "test-casa": "jest spec/**/Contacto/"
   },
   "keywords": [],

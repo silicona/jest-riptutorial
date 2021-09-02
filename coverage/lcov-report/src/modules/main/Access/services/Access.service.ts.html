@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.33% </span>
+                <span class="strong">60.98% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/12</span>
+                <span class='fraction'>25/41</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">60.98% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>25/41</span>
             </div>
         
             
@@ -102,43 +102,43 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
@@ -146,38 +146,38 @@ import { AccessEntity } from '../entities/Access.entity'
 &nbsp;
 @Injectable()
 export class AccessService {
-<span class="fstat-no" title="function not covered" >  constructor(</span>
+  constructor(
     @InjectRepository(AccessEntity)
-    private <span class="cstat-no" title="statement not covered" >repository: R</span>epository&lt;AccessEntity&gt;
+    private repository: Repository&lt;AccessEntity&gt;
   ) {}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>getHotels (hotelIds: number[]): Promise&lt;AccessEntity[]&gt; {
+<span class="fstat-no" title="function not covered" >  async getHotels (hotelIds: number[]): Promise&lt;AccessEntity[]&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    return this.repository.createQueryBuilder('a')</span>
-      .select()
-      .whereInIds(hotelIds)
-      .getMany()
-  }
+<span class="cstat-no" title="statement not covered" >      .select()</span>
+<span class="cstat-no" title="statement not covered" >      .whereInIds(hotelIds)</span>
+<span class="cstat-no" title="statement not covered" >      .getMany()</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>getHotel (hotelId: number): Promise&lt;AccessEntity&gt; {
-<span class="cstat-no" title="statement not covered" >    return this.repository.createQueryBuilder('a')</span>
+  async getHotel (hotelId: number): Promise&lt;AccessEntity&gt; {
+    return this.repository.createQueryBuilder('a')
       .select()
       .where('a.hotelId = :hotelId', { hotelId })
       .getOne()
-  }
+<span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >  }</span></span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>getHotelsByWebCodes (webCodes: number[]): Promise&lt;AccessEntity[]&gt; {
+<span class="fstat-no" title="function not covered" >  async getHotelsByWebCodes (webCodes: number[]): Promise&lt;AccessEntity[]&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    return this.repository.createQueryBuilder('a')</span>
-    .select()
-    .whereInIds(webCodes)
-    .getMany()
-  }
+<span class="cstat-no" title="statement not covered" >    .select()</span>
+<span class="cstat-no" title="statement not covered" >    .whereInIds(webCodes)</span>
+<span class="cstat-no" title="statement not covered" >    .getMany()</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>getHotelByWebCode (webCode: number): Promise&lt;AccessEntity&gt; {
+<span class="fstat-no" title="function not covered" >  async getHotelByWebCode (webCode: number): Promise&lt;AccessEntity&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    return this.repository.createQueryBuilder('a')</span>
-    .select()
-    .where('a.webCode', {webCode})
-    .getOne()
-  }
+<span class="cstat-no" title="statement not covered" >    .select()</span>
+<span class="cstat-no" title="statement not covered" >    .where('a.webCode', {webCode})</span>
+<span class="cstat-no" title="statement not covered" >    .getOne()</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 &nbsp;
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -187,7 +187,7 @@ export class AccessService {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Sep 01 2021 23:19:00 GMT+0200 (GMT+02:00)
+                at Thu Sep 02 2021 17:32:04 GMT+0200 (GMT+02:00)
             </div>
         </div>
         <script src="../../../../../prettify.js"></script>

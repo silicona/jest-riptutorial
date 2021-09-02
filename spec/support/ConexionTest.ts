@@ -1,7 +1,7 @@
 import { createConnection, getConnection } from "typeorm"
 
 export const conexion = {
-    async iniciarAvi(dropSchema: boolean = false) {
+    async iniciarAviAcceso(dropSchema: boolean = false) {
         return await createConnection({
             name: 'default',
             type: 'mysql',
@@ -11,11 +11,28 @@ export const conexion = {
             password: 'a"·gvfGefvx4',
             database: "AviratoAcceso",
             entities: [
-                __dirname + '/src/**/*.entity.ts',
-                '/src/**/*.entity.ts'
+                //__dirname + '/src/**/entities/*.{ts, js}',
+                './src/**/Access/entities/*.ts'
             ]
         });
     },
+    async iniciarAviPMS(dropSchema: boolean = false) {
+        return await createConnection({
+            name: 'default',
+            type: 'mysql',
+            host: "192.168.2.5",
+            port: 3306,
+            username: 'Developer',
+            password: 'a"·gvfGefvx4',
+            database: "AviratoPMS1",
+            entities: [
+                //__dirname + '/src/**/entities/*.{ts, js}',
+                './src/**/Text/**/*.entity.ts',
+                './src/**/mailing/**/*.entity.ts'
+            ]
+        });
+    },
+
     async iniciarMamp(dropSchema: boolean = false) {
         return await createConnection({
             name: 'default',
