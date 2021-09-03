@@ -1,17 +1,19 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { BaseService } from "core/BaseService";
-import { Connection, Repository } from "typeorm";
+import { Repository } from "typeorm";
 import { ContactoEntity } from "../entities/Contacto.entity";
 
 @Injectable()
-export class ContactoService extends BaseService {
+export class ContactoService {
+    constructor(
+        @InjectRepository(ContactoEntity)
+        private repository: Repository<ContactoEntity>
+    ) { }
 
-    public constructor(connection: Connection) {
-        super(connection)
+    async getContactos(): Promise<ContactoEntity[]> {
+        return this.repository.createQueryBuilder('a')
+            .select()
+            .getMany()
     }
 
-    public getContactos = async () => await (await this.makeQB(ContactoEntity, 'c'))
-        .select()
-        .getMany()
 }

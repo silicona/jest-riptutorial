@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">52.78% </span>
+                <span class="strong">51.39% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>38/72</span>
+                <span class='fraction'>37/72</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">52.78% </span>
+                <span class="strong">51.39% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/72</span>
+                <span class='fraction'>37/72</span>
             </div>
         
             
@@ -147,23 +147,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -180,7 +164,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -217,38 +217,38 @@ export const conexion = {
 <span class="cstat-no" title="statement not covered" >            ]</span>
 <span class="cstat-no" title="statement not covered" >        });</span>
     },
-    async iniciarAviPMS(dropSchema: boolean = false) {
-        return await createConnection({
-            name: 'default',
-            type: 'mysql',
-            host: "192.168.2.5",
-            port: 3306,
-            username: 'Developer',
-            password: 'a"·gvfGefvx4',
-            database: "AviratoPMS1",
-            entities: [
-                //__dirname + '/src/**/entities/*.{ts, js}',
-                './src/**/Text/**/*.entity.ts',
-                './src/**/mailing/**/*.entity.ts'
-            ]
-        });
-<span class="branch-0 cbranch-no" title="branch not covered" >    },</span>
-&nbsp;
-<span class="fstat-no" title="function not covered" >    async iniciarMamp(dropSchema: boolean = false) {</span>
+<span class="fstat-no" title="function not covered" >    async iniciarAviPMS(dropSchema: boolean = false) {</span>
 <span class="cstat-no" title="statement not covered" >        return await createConnection({</span>
 <span class="cstat-no" title="statement not covered" >            name: 'default',</span>
 <span class="cstat-no" title="statement not covered" >            type: 'mysql',</span>
-<span class="cstat-no" title="statement not covered" >            host: "localhost",</span>
-<span class="cstat-no" title="statement not covered" >            port: 8889,</span>
-<span class="cstat-no" title="statement not covered" >            username: 'root',</span>
-<span class="cstat-no" title="statement not covered" >            password: 'root',</span>
-<span class="cstat-no" title="statement not covered" >            database: 'agenda',</span>
+<span class="cstat-no" title="statement not covered" >            host: "192.168.2.5",</span>
+<span class="cstat-no" title="statement not covered" >            port: 3306,</span>
+<span class="cstat-no" title="statement not covered" >            username: 'Developer',</span>
+<span class="cstat-no" title="statement not covered" >            password: 'a"·gvfGefvx4',</span>
+<span class="cstat-no" title="statement not covered" >            database: "AviratoPMS1",</span>
 <span class="cstat-no" title="statement not covered" >            entities: [</span>
-<span class="cstat-no" title="statement not covered" >                __dirname + '/src/**/*.entity.ts',</span>
-<span class="cstat-no" title="statement not covered" >                './src/**/entities/*.{ts,js}'</span>
+<span class="cstat-no" title="statement not covered" >                //__dirname + '/src/**/entities/*.{ts, js}',</span>
+<span class="cstat-no" title="statement not covered" >                './src/**/Text/**/*.entity.ts',</span>
+<span class="cstat-no" title="statement not covered" >                './src/**/mailing/**/*.entity.ts'</span>
 <span class="cstat-no" title="statement not covered" >            ]</span>
 <span class="cstat-no" title="statement not covered" >        });</span>
     },
+&nbsp;
+    async iniciarMamp(dropSchema: boolean = false) {
+        return await createConnection({
+            name: 'default',
+            type: 'mysql',
+            host: "localhost",
+            port: 8889,
+            username: 'root',
+            password: 'root',
+            database: 'agenda',
+            entities: [
+                __dirname + '/src/**/*.entity.ts',
+                './src/**/entities/*.{ts,js}'
+            ]
+        });
+<span class="branch-0 cbranch-no" title="branch not covered" >    },</span>
 &nbsp;
     async cerrar() {
         await getConnection().close()
@@ -277,7 +277,7 @@ export class HelperConexion extends BaseService {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Sep 02 2021 18:04:34 GMT+0200 (GMT+02:00)
+                at Thu Sep 02 2021 20:08:36 GMT+0200 (GMT+02:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>

@@ -9,7 +9,7 @@ describe("Suite de Contacto Base Service", () => {
     var serv: ContactoBaseService;
     beforeAll(async () => {
         conn = await conexion.iniciarMamp()
-        serv = new ContactoBaseService(conn.getRepository(ContactoEntity))
+        serv = new ContactoBaseService(conn)
     });
 
     afterAll(async () => {

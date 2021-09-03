@@ -1,15 +1,16 @@
-import { Connection } from "typeorm"
+import { Connection } from "typeorm";
 import { ContactoEntity } from "../../../src/modules/main/Contactos/entities/Contacto.entity";
-import { ContactoService } from '../../../src/modules/main/Contactos/services/Contacto.service'
+import { ContactoTenantService } from '../../../src/modules/main/Contactos/services/ContactoTenant.service'
 import { conexion } from "../../support/ConexionTest";
 
-describe("Suite de Contacto Service", () => {
+describe("Suite de Contacto Tenant Service", () => {
 
     var conn: Connection;
-    var serv: ContactoService;
+    var serv: ContactoTenantService;
     beforeAll(async () => {
         conn = await conexion.iniciarMamp()
-        serv = new ContactoService(conn.getRepository(ContactoEntity))
+        serv = new ContactoTenantService()
+        serv['connection'] = conn
     });
 
     afterAll(async () => {
@@ -17,9 +18,8 @@ describe("Suite de Contacto Service", () => {
     })
 
     it("GetContactos", async () => {
-        //console.log(conn.getRepository(ContactoEntity))
         var contactos = await serv.getContactos()
-
+        console.log(contactos)
         expect(contactos).toBeInstanceOf(Array)
         expect(contactos[0]).toBeInstanceOf(ContactoEntity)
     })
