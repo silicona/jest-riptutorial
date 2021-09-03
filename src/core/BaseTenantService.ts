@@ -1,8 +1,8 @@
 import { BaseService } from './BaseService'
 import { HttpService, Inject } from '@nestjs/common'
 import { Connection } from 'typeorm'
-/*
 import { AccessService } from 'modules/main/Access/services/Access.service'
+/*
 import { ActivityService } from 'modules/tenant/Activity/services/Activity.service'
 import { AuthService } from 'modules/main/Auth/services/Auth.service'
 import { AvailabilityService } from 'modules/tenant/Availability/services/Availability.service'
@@ -38,8 +38,8 @@ import { TextService } from 'modules/tenant/Text/services/Text.service'
 */
 export class BaseTenantService extends BaseService {
   constructor(
-    /*
     public readonly accessService: AccessService,
+    /*
     public readonly activityService: ActivityService,
     public readonly authService: AuthService,
     public readonly availabilityService: AvailabilityService,

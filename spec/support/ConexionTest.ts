@@ -1,4 +1,4 @@
-import { createConnection, getConnection } from "typeorm"
+import { Connection, createConnection, getConnection } from "typeorm"
 
 export const conexion = {
     async iniciarAviAcceso(dropSchema: boolean = false) {
@@ -28,7 +28,10 @@ export const conexion = {
             entities: [
                 //__dirname + '/src/**/entities/*.{ts, js}',
                 './src/**/Text/**/*.entity.ts',
-                './src/**/mailing/**/*.entity.ts'
+                './src/**/mailing/**/*.entity.ts',
+                './src/**/Sync/**/*.entity.ts',
+                //'src/modules/tenant/**/*.entity.ts',
+
             ]
         });
     },
@@ -50,8 +53,13 @@ export const conexion = {
     },
 
     async cerrar() {
-        await getConnection().close()
+
+        /*if (conexion)
+            await conexion.close()
+        else*/
+            await getConnection().close()
     },
+
     async limpiar() {
         const conexion = getConnection()
         const entidades = conexion.entityMetadatas

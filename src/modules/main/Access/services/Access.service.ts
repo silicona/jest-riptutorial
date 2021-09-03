@@ -27,7 +27,8 @@ export class AccessService {
   async getHotelsByWebCodes (webCodes: number[]): Promise<AccessEntity[]> {
     return this.repository.createQueryBuilder('a')
     .select()
-    .whereInIds(webCodes)
+    //.whereInIds(webCodes)
+    .where('codigoWeb IN (:...webCodes)', { webCodes })
     .getMany()
   }
 

@@ -10,6 +10,8 @@
     "@nestjs/typeorm": "^8.0.2",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
+    "eventemitter2": "^6.4.4",
+    "express": "^4.17.1",
     "mysql": "^2.18.1",
     "rxjs": "^7.3.0",
     "typeorm": "^0.2.37"
@@ -24,8 +26,9 @@
   "scripts": {
     "test": "jest",
     "test-ruta": "jest $ruta",
-    "test:avi": "jest ./spec/modules/Text/Text.service.spec.ts",
-    "test-access": "jest ./spec/modules/Access/Access.service.spec.ts",
+    "test:avi": "jest ./spec/modules/Text/",
+    "test:access": "jest ./spec/modules/Access/Access.service.spec.ts",
+    "test:sync": "jest ./spec/modules/Sync/",
     "test-casa": "jest spec/**/Contacto/"
   },
   "keywords": [],

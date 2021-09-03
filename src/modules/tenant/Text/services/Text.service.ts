@@ -4,7 +4,7 @@ import { LanguageTextEntity } from '../../../mailing/Campaign/entities/LanguageT
 
 
 export class TextService extends BaseTenantService {
-constructor(conn){ super(conn)}
+
   public getTextsById = async (hotelId: number, textId) => {
     const langs = await this.fetchLanguages(hotelId)
     const texts: any = await this.fetchTextsById(textId)
@@ -23,6 +23,19 @@ constructor(conn){ super(conn)}
     .select(['idIdioma as lang', 'texto as text'])
     .where('idTexto = :textId', { textId })
     .getMany()
+
+  private fetchTextsByIdTest = async (textId: number) => {
+    /*console.log(textId)
+    var conn = await this.makeQB(LanguageTextEntity, 'lt')
+    console.log(conn)
+    var res = conn    .select(['idIdioma as lang', 'texto as text'])
+    // .where('textId = :textId', { textId })
+    //.where('idTexto = :textId', { textId })
+    //.printSql()
+    console.log(res)
+    return res    .getMany()*/
+    console.log(this)
+  }
 
   private fetchLanguages = async (hotelId: number) => await (await this.makeQB(LanguagesEntity, 'i'))
     .select()

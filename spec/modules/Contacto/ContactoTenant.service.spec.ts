@@ -19,7 +19,7 @@ describe("Suite de Contacto Tenant Service", () => {
 
     it("GetContactos", async () => {
         var contactos = await serv.getContactos()
-        console.log(contactos)
+        //console.log(contactos)
         expect(contactos).toBeInstanceOf(Array)
         expect(contactos[0]).toBeInstanceOf(ContactoEntity)
     })
